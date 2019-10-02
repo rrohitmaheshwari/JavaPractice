@@ -1,4 +1,4 @@
-package threadExamples;
+package src.threadExamples;
 
 public class AnotherThread extends Thread{
 

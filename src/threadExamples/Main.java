@@ -1,4 +1,4 @@
-package threadExamples;
+package src.threadExamples;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package streamExamples;
+package src.streamExamples;
 
 import java.io.IOException;
 import java.nio.file.Files;
