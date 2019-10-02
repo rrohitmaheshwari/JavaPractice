@@ -66,7 +66,7 @@ public class JavaStreams {
         System.out.println("-------");
 
         // 8. Stream rows from text file, sort, filter, and print
-        Stream<String> bands = Files.lines(Paths.get("/Users/rohit/Documents/GitHub/JavaPractice/src/streamExamples/bands.txt"));
+        Stream<String> bands = Files.lines(Paths.get("src/streamExamples/bands.txt"));
         bands
                 .sorted()
                 .filter(x -> x.length() > 13)
@@ -75,14 +75,14 @@ public class JavaStreams {
         System.out.println("-------");
 
         // 9. Stream rows from text file and save to List
-        List<String> bands2 = Files.lines(Paths.get("/Users/rohit/Documents/GitHub/JavaPractice/src/streamExamples/bands.txt"))
+        List<String> bands2 = Files.lines(Paths.get("src/streamExamples/bands.txt"))
                 .filter(x -> x.contains("jit"))
                 .collect(Collectors.toList());
         bands2.forEach(x -> System.out.println(x));
         System.out.println("-------");
 
         // 10. Stream rows from CSV file and count
-        Stream<String> rows1 = Files.lines(Paths.get("/Users/rohit/Documents/GitHub/JavaPractice/src/streamExamples/data.txt"));
+        Stream<String> rows1 = Files.lines(Paths.get("src/streamExamples/data.txt"));
         int rowCount = (int)rows1
                 .map(x -> x.split(","))
                 .filter(x -> x.length == 3)
@@ -92,7 +92,7 @@ public class JavaStreams {
         System.out.println("-------");
 
         // 11. Stream rows from CSV file, parse data from rows
-        Stream<String> rows2 = Files.lines(Paths.get("/Users/rohit/Documents/GitHub/JavaPractice/src/streamExamples/data.txt"));
+        Stream<String> rows2 = Files.lines(Paths.get("src/streamExamples/data.txt"));
         rows2
                 .map(x -> x.split(","))
                 .filter(x -> x.length == 3)
@@ -102,7 +102,7 @@ public class JavaStreams {
         System.out.println("-------");
 
         // 12. Stream rows from CSV file, store fields in HashMap
-        Stream<String> rows3 = Files.lines(Paths.get("/Users/rohit/Documents/GitHub/JavaPractice/src/streamExamples/data.txt"));
+        Stream<String> rows3 = Files.lines(Paths.get("src/streamExamples/data.txt"));
         Map<String, Integer> map = new HashMap<>();
         map = rows3
                 .map(x -> x.split(","))
@@ -127,6 +127,28 @@ public class JavaStreams {
         IntSummaryStatistics summary = IntStream.of(7, 2, 19, 88, 73, 4, 10)
                 .summaryStatistics();
         System.out.println(summary);
+        System.out.println("-------");
+
+
+        // 15.  Parsing integer array
+        int a[] = {1,2,3,4,5};
+        System.out.println(IntStream.of(a)
+                .min().getAsInt());
+        System.out.println("-------");
+
+        // 16.  Parsing List of integer
+        int b[] = {1,2,3,4,5};
+        List<Integer> list = IntStream.of(b).boxed().collect(Collectors.toList());
+        list.forEach(System.out::print);
+
+        System.out.println();
+
+        List<Integer> aList = new ArrayList<>();
+        aList.add(1);
+        aList.add(2);
+        aList.add(3);
+
+        System.out.println(aList.stream().mapToInt(Integer::intValue).max().getAsInt());
         System.out.println("-------");
 
     }
