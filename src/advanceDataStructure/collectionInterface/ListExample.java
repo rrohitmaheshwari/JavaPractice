@@ -56,9 +56,28 @@ public class ListExample {
         arrayList.clear();
         System.out.println(arrayList);
 
-        List<Integer> linkedList = new LinkedList<>();
-        List<Integer> vector = new Vector<>();
+
+
+        LinkedList<String> linkedList = new LinkedList<>();  //used LinkedList instead of List to get more features
+        linkedList.add("A");
+        linkedList.add("B");
+        linkedList.add("C");
+        linkedList.add("D");
+        String []aList = {"E","F"};
+        linkedList.addAll(Arrays.asList(aList));
+        linkedList.addLast("G");   //if you use List in declaration we will not find addLast method
+        System.out.println("Linked list : " + linkedList);
+
+        linkedList.remove("B");
+        linkedList.remove(3);
+        linkedList.removeFirst();
+
+        System.out.println("Linked list after removal: " + linkedList);
+
         List<Integer> stack = new Stack<>();
+
+
+        List<Integer> vector = new Vector<>();
 
 
 
