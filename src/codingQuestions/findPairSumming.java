@@ -7,8 +7,6 @@ import java.util.Map;
 public class findPairSumming {
     public static void main(String[] args) {
         int[] a = {2, 4, 7, 5, 3, 5, 8, 5, 1, 7};
-
-        System.out.println("a: " + Arrays.toString(a));
         System.out.println(findPairsSummingTok(a, 4, 10));
 
     }
