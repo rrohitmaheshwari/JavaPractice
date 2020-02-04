@@ -23,7 +23,6 @@ public class Insert5 {
 
         int i = 0;
         if (sign == 1) {
-            //find first digit index for lesser number
             while (i < s.length()) {
                 if ((s.charAt(i) - '0' >= 5))
                     i++;
@@ -33,7 +32,6 @@ public class Insert5 {
 
 
         } else {
-            //find first digit index for greater number
             while (i < s.length()) {
                 if ((s.charAt(i) - '0' <= 5))
                     i++;
@@ -42,14 +40,12 @@ public class Insert5 {
             }
         }
 
-        //inserting 5
         s.insert(i, '5');
 
         int val = Integer.parseInt(s.toString());
         return sign * val;
 
     }
-
 
 
 }
