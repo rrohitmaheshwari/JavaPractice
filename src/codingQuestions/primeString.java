@@ -81,6 +81,8 @@ public class primeString {
         }
 
 
+        System.out.println(hm);
+
         StringBuilder res = new StringBuilder();
         for (char a : s.toCharArray()) {
             res.append(hm.get(a));
