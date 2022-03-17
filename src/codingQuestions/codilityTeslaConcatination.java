@@ -6,41 +6,33 @@ import java.util.Set;
 public class codilityTeslaConcatination {
 
     public static void main(String[] args) {
-        String A[] = {"co", "dil", "ity"};
+        String A[] = {"un", "iq", "aef"};
         System.out.println(solution(A));
     }
 
-    static int max;
-
     public static int solution(String A[]) {
-
-        int len = A.length;
-        helper(A, 0, len, "");
-        return max;
+        return helper(A, 0, A.length, "", 0);
     }
 
-    static void helper(String A[], int current, int len, String currString) {
-        if (current == len) {
-            return;
-        }
+    static int helper(String A[], int current, int len, String currString, int max) {
         if (!isUnique(currString)) {
-            return;
+            return 0;
+        } else {
+            max = Math.max(max, currString.length());
         }
-        if (max < currString.length()) {
-            max = currString.length();
+        if (current == len) {
+            return max;
         }
-        helper(A, current + 1, len, currString + A[current]);
-        helper(A, current + 1, len, currString);
+
+        return Math.max(helper(A, current + 1, len, currString, max), helper(A, current + 1, len, currString + A[current], max));
     }
 
-    static boolean isUnique(String s) {
+    static  boolean isUnique(String s) {
         if (s.length() > 26) return false;
         boolean[] chars = new boolean[26];
-        int ch;
-        for (int i = 0; i < s.length(); i++) {
-            ch = s.charAt(i) - 'a';
-            if (chars[ch]) return false;
-            chars[ch] = true;
+        for (char c: s.toCharArray()) {
+            if (chars[c-'a']) return false;
+            chars[c-'a'] = true;
         }
         return true;
     }
