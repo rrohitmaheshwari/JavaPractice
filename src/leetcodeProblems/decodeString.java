@@ -2,7 +2,7 @@
 394. Decode String
 https://leetcode.com/problems/decode-string/
 https://leetcode.com/explore/interview/card/google/61/trees-and-graphs/3073/
-O(maxK*n) maxK is the maximum value of k
+O(maxK*n) maxK is the maximum value of k and 2 as count of string blocks
 O(n)
 */
 
