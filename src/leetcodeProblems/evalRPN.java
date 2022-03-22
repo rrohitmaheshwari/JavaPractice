@@ -2,6 +2,8 @@
 150. Evaluate Reverse Polish Notation
 https://leetcode.com/problems/evaluate-reverse-polish-notation/
 https://leetcode.com/explore/interview/card/linkedin/336/heap-queue-stack/1959/
+O(N)
+O(N)
 */
 
 class Solution {
