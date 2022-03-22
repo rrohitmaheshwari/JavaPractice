@@ -26,3 +26,31 @@ class Solution {
         return new int[]{lo,hi};
     }
 }
+
+
+/* better appoach for non sorted array
+
+*/
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer,Integer> m = new HashMap<>();
+        
+        int temp=0;
+        
+        for(int i=0;i<nums.length;i++)
+        {
+            temp=target-nums[i];  //compliment
+            if(m.containsKey(temp))
+            {
+                return(new int[]{m.get(temp),i});
+            }
+            else
+            {
+                m.put(nums[i],i);
+            }
+        }
+        
+        return new int[0];
+    
+    }
+}
