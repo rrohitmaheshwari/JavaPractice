@@ -24,7 +24,7 @@ class Solution {
         // break condition
         if(comb.size() == N)
         {
-            // deep copy
+            // deep copy, Alternate: res.add((List<Integer>)comb.clone());
             res.add(new ArrayList<Integer>(comb));
             return;
         }
