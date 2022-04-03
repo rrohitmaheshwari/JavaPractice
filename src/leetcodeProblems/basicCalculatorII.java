@@ -1,6 +1,8 @@
 /*
 227. Basic Calculator II
 https://leetcode.com/problems/basic-calculator-ii/
+O(N)
+O(N)----can be reduced to O(1) if we save stack in some result variable
 */
 
 class Solution {
