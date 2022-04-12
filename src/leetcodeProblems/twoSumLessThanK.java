@@ -16,7 +16,7 @@ class Solution {
         int ans = -1;
         
         // two pointer
-        while(l<=r)
+        while(l<r)
         {
             int sum = nums[l]+nums[r];
             if(sum<k)
