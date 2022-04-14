@@ -68,7 +68,6 @@ class Solution {
         {
             tmp = first.next;
             first.next = second;
-            first = first.next;
             first = tmp;
 
             tmp = second.next;
