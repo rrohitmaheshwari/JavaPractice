@@ -5,6 +5,7 @@ O(NM)
 O(N)
 
 We can further use KMP algorithm to optimize this.
+https://leetcode.com/problems/subtree-of-another-tree/discuss/474425/JavaPython-2-solutions%3A-Naive-Serialize-in-Preorder-then-KMP-O(M%2BN)-Clean-and-Concise
 */
 
 /**
