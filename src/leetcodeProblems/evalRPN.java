@@ -5,42 +5,41 @@ https://leetcode.com/explore/interview/card/linkedin/336/heap-queue-stack/1959/
 O(N)
 O(N)
 */
-
 class Solution {
     public int evalRPN(String[] tokens) {
         
-        Stack<String> st = new Stack<>();
+        Stack<Integer> st = new Stack<>();
         int result;
         for(String s:tokens)
         {
             result=0;
             if(isNumeric(s))
             {
-                st.push(s);
+                st.push(Integer.parseInt(s));
             }
             else
             {
                 if(s.equals("+"))
                 {
-                   result =   Integer.parseInt(st.pop())+Integer.parseInt(st.pop());
+                   result =   st.pop() + st.pop();
                 }
                 else if(s.equals("-"))
                 {
-                   result =  - Integer.parseInt(st.pop())+ Integer.parseInt(st.pop());
+                   result =  -st.pop() + st.pop();
                 }
                  else if(s.equals("/"))
                 {
-                     result = Integer.parseInt(st.pop());
-                   result = Integer.parseInt(st.pop())/result;
+                     result = st.pop();
+                     result = st.pop() / result;
                 }
                  else if(s.equals("*"))
                 {
-                   result =   Integer.parseInt(st.pop())*Integer.parseInt(st.pop());
+                   result = st.pop() * st.pop();
                 }
-                 st.push(result+"");
+                 st.push(result);
             }
         }
-        return Integer.parseInt(st.pop());
+        return st.pop();
         
     }
     
