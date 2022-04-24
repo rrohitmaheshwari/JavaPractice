@@ -28,6 +28,11 @@ class Solution {
         int n = angles.size();
         for(int i = 0; i < n; i++) {
             angles.add(angles.get(i) + 360); // now all angles are CIRCULAR (-150 degree is 210) and (10 degree is now 370)
+
+            if(angles.get(i)>angle)  // small optimization || can be removed
+            {
+                break;
+            }
         }
         
         int begin = 0; // classic sliding window variable 
