@@ -32,7 +32,16 @@ public class Solution {
         }
         return memo[i][j];
     }
-/*  ACTUAL DP CODE
+/*  ACTUAL DP CODE :::: DIAGRAM check from https://leetcode.com/problems/longest-palindromic-subsequence/discuss/99101/Straight-forward-Java-DP-solution
+  i,j represent index in string...>  
+
+
+  0 1 2 3 4 5
+  a g d b b a
+
+  [2,3] -> string of len (3-2)+1 = 2 ;starting from 2 => db
+
+
      public int longestPalindromeSubseq(String s) {
         int[][] dp = new int[s.length()][s.length()];
         
