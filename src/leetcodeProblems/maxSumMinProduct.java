@@ -5,6 +5,9 @@ O(N)
 O(N)
 
 Leetcode throws error for this code but seems correct to me :(
+
+Refer: https://www.youtube.com/watch?v=YLesLbNkyjA
+for image and explaination
 */
 
 class Solution {
