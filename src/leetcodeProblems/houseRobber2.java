@@ -13,6 +13,11 @@ class Solution {
         
         this.memo = new int[100];
         
+        if(nums.length == 1)
+        {
+            return nums[0];
+        }
+        
         // Fill with sentinel value representing not-calculated recursions.
         Arrays.fill(this.memo, -1);
         
@@ -21,7 +26,7 @@ class Solution {
         // this.memo = new int[100];
         Arrays.fill(this.memo, -1);
         int r = this.robFrom(1, nums,nums.length);
-        return Math.max(nums[0],Math.max(l,r));
+        return Math.max(l,r); 
     }
     
     private int robFrom(int curr, int[] nums,int right) {
