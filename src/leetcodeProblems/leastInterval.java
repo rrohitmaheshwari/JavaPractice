@@ -30,6 +30,8 @@ class Solution {
         
 
         // idle_time cannot be negative(last idle slots are not actully idle)
+        // Ex, 3A 3B 1C. ->. ABC | AB_ | AB
+        // the above code only alocates mid spaces not the last space so idle Time can go negative
         idleTime = Math.max(0,idleTime);
         
         return idleTime+tasks.length;
