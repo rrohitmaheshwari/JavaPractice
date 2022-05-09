@@ -3,6 +3,10 @@
 https://leetcode.com/problems/sliding-window-maximum/
 O(N) -> Linear
 O(k) -> Deque
+
+Logic: https://www.youtube.com/watch?v=DfljaUwZsOk
+Figure at timestamp: 8:24
+
 */
 
 class Solution {
